@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="card  text-center col-md-4 offset-md-1">
+       
+        <div class="card-header bg-white">
+            <h1 class="display-1" >URL: https://gorest.co.in/public/v1/users</h1>
+        </div>
+
+        <div class="card-body">
+            
+            <img src="https://cdn.dribbble.com/users/100346/screenshots/4049150/checkmark.gif" class="img-fluid">
+            Ajax Get Request Demo
+
+        </div>
+
+
+    </div>
+    
+
+    <div class="card  offset-sm-1 col-sm-5 text-left ">
+      
+        <div class="card-body">
+ 
+            <table class="table  ">
+        
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>gender</th>
+                    <th>status</th>
+                </tr>
+        
+                <tr *ngFor = "let person of myData" >
+                    <td>{{person.id}}</td>
+                    <td>{{person.name}}</td>
+                    <td>{{person.email}}</td>
+                    <td>{{person.gender}}</td>
+                    <td>{{person.status}}</td>
+                </tr>
+ 
+            </table>
+ 
+        </div>
+
+    </div>
+    
+</div>
+
+
+

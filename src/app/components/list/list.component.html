@@ -1,0 +1,34 @@
+<div class="card  text-center col-md-4 offset-md-4 " >
+    
+    <div class="card-header">
+        Tasks
+    </div>
+
+    <div class="card-body ">
+    
+        <h1 class="display-1" *ngIf = "Tasks.length == 0; else taskList" >All Done No Tasks!</h1>
+        <img *ngIf = "Tasks.length == 0" src="https://cdn.dribbble.com/users/1162077/screenshots/5410220/relax-animation.gif" class="img-fluid">
+        
+        <ng-template #taskList >
+            <ul class="list-group" >
+                <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor = "let task of Tasks">
+                    {{task}}
+                    <span  (click) = "removeTask(task)" class="badge bg-danger rounded-pill" style="cursor: pointer;" >x</span>
+                </li>
+            </ul>
+        </ng-template>
+
+    </div>
+
+    <div class="card-footer ">
+        <div class="input-group offset-sm-2">
+            <input type="text" #todo name = "todo" placeholder="Task Name"  class="input-group-text"/>
+            <button (click) = "addTask(todo.value)" class="btn btn-primary">Add Task</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+

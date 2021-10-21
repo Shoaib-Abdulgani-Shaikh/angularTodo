@@ -1,0 +1,62 @@
+<div class="row" style="padding: 0%;">
+
+    <div class="card  text-center col-md-3 offset-md-1">
+        
+        <div class="card-header bg-white">
+            <h1 class="display-1" >Ajax Post Request Demo</h1>
+        </div>
+
+        <br><br><br>
+
+        <div class="card-body">
+            
+            <div class=" col-md-6 offset-md-3">
+                <input type="text" #name name = "name" placeholder="Enter Name"  class="input-group-text col-md-12"/>
+                <br><br>
+                <input type="text" #job name = "job" placeholder="Enter Job"  class="input-group-text col-md-12"/>
+                <br><br>
+                <button  class="btn btn-primary col-md-12"  (click) = "postData(name.value,job.value)">Make Post request</button>
+            </div>
+            
+        </div>
+
+    </div>
+    
+    <div class="card offset-sm-1 col-sm-5 text-left ">
+        
+        <div class="card-header bg-white">
+            <h1 class="display-1" >Ajax Post Response</h1>
+        </div>
+        
+        <div class="card-body">
+
+            <ul class="list-group" *ngIf = "newUser; else imageDiv" style="margin-top: 2%;">
+
+                <li class="list-group-item d-flex justify-content-between align-items-center" >
+                    id : {{newUser.id}}
+                </li>
+                
+                <li class="list-group-item d-flex justify-content-between align-items-center" >
+                    Name : {{newUser.name}}
+                </li>
+                
+                <li class="list-group-item d-flex justify-content-between align-items-center" >
+                    job : {{newUser.job}}
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center" >
+                    createdAt : {{newUser.createdAt}}
+                </li>
+
+            </ul>
+
+            <ng-template #imageDiv>
+                <img  src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/10/Stop-Animation-Blog-Post-Wave.gif" class="img-fluid">
+            </ng-template>
+
+        </div>
+
+    </div>
+
+</div>
+
