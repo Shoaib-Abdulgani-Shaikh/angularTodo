@@ -1,6 +1,6 @@
 # Todo
 
-Live link : https://angular-todo-theta.vercel.app/
+Live link : https://angular-todo-theta.vercel.app/ <br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
 ## Development server
